@@ -22,7 +22,7 @@
 (defn -main [& args]
 	(with-command-line
 	  args 
-	  "Usage: wc [-l|-w|-c] [-o out.txt] <file>..."
+	  "Usage: wcc [-l|-w|-c] [-o out.txt] <file>..."
 	  [[lines? l? "Count lines" true]
 	   [words? w? "Count words" false]
 	   [chars? c? "Count chars" false]
