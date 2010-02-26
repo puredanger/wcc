@@ -1,7 +1,7 @@
 (ns wcc
   	(:gen-class)
 	(:use [clojure.contrib command-line 
-			[duck-streams :only [read-lines with-out-writer writer]]
+			[duck-streams :only [read-lines writer]]
 			[str-utils2 :only [split]]]))
 
 (defn count-lines [file] 
