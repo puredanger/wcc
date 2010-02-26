@@ -7,7 +7,7 @@
 	(count (read-lines file)))
 
 (defn count-words [file]
-	(count (seq (.split #"\s+" (slurp file)))))
+	(count (.split #"\s+" (slurp file))))
 
 (defn count-chars [file] 
 	(count (slurp file)))
