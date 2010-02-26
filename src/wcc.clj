@@ -29,11 +29,10 @@
 	   files]
 
 		(binding [*out* (if out (writer out) *out*)]
-			(doall 
-				(map 
-					#(cond 
-						lines? (print-count % count-lines)
-						words? (print-count % count-words)
-						chars? (print-count % count-chars)
-						:else (print-invalid-option))
-					files)))))
+			(let [count-fn #(cond 
+					lines? (print-count % count-lines)
+					words? (print-count % count-words)
+					chars? (print-count % count-chars)
+					:else (print-invalid-option))]
+				(doall 
+					(map count-fn files))))))
